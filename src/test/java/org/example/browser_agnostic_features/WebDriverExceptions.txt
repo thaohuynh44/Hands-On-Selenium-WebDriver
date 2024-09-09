@@ -1,0 +1,16 @@
+- All exceptions provided by WebDriver API inherit from the class WebDriverExpcetion class and are 'unchecked'
+Object
+    Throwable
+        Exception
+            WebDriverException
+                DevToolsException
+                ...
+
+- The root of this hierarchy is the Throwable class, it has 2 subclasses:
+    Error: irrecoverable problems, applications crash rather than handle these errors (i.e. OutOfMemoryError, StackOverflowError)
+    Exception: recoverable problems, can handle these exceptions by using try-catch blocks, there're 2 types of Exception classes:
+        Checked exception:  directly inherit the Throwable class, validated at compile time, must handle in try-catch block or rethrow using throws keyword (i.e. IOException or MalformedURLException)
+        Unchecked exception: inherit from RuntimeException, subtype of Exception, not required being handled with try-catch or rethrowing with throws
+
+
+        
